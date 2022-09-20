@@ -6,30 +6,19 @@ new 연산자를 통해 인스턴스로 만들 수 없다.
 반드시 상속을 통해서 구체적인 클래스를 만들어서 사용을 해야한다.
 
 
-[//]: # (```java)
+```java
+abstract class Pet {
+    abstract void bark() {} ;
+    or
+    abstract void bars();
+//void bark()
+}
 
-[//]: # (abstract class Pet {)
-
-[//]: # (    abstract void bark&#40;&#41; {} ;)
-
-[//]: # (    or)
-
-[//]: # (    abstract void bars&#40;&#41;;)
-
-[//]: # (//void bark&#40;&#41;)
-
-[//]: # (})
-
-[//]: # ()
-[//]: # (class Cat extends Pet {)
-
-[//]: # (  ---)
-
-[//]: # (  ---)
-
-[//]: # (})
-
-[//]: # (```)
+class Cat extends Pet {
+  ---
+  ---
+}
+```
 
 
 > 소프트웨어 디자인 패턴에서는 추상클래스를 상속에서 구현하는 클래스를 **콘크리스 클래스** 라고 한다.

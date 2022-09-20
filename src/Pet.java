@@ -1,4 +1,4 @@
-public interface Pet {
-    void bark();
-
-}
+//public interface Pet {
+//    void bark();
+//
+//}

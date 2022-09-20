@@ -46,7 +46,6 @@ static
 static class pet {
     private static string name;
     private static final string leg = 4;        //상수
-
     static void bark() {
     }
 }
