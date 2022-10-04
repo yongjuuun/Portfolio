@@ -125,7 +125,7 @@ String Buffer
 * StringBuilder : 문자열 연산이 많고, 단일쓰레드 환경 또는 동기화를 고려하지 않아도 되는 경우
 
 
-#### String 차이점
+#### String - StringBuffer, StringBuilder 차이점
 - String은 불변(immutable) 속성
 - StringBuffer, StringBuilder는 가변성(mutable) 속성
   - 문자열의 추가, 수정, 삭제가 빈번하게 발생하는 경우에 사용
