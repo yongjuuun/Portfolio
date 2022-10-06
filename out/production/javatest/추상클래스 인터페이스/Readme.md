@@ -5,18 +5,21 @@
 new 연산자를 통해 인스턴스로 만들 수 없다.
 반드시 상속을 통해서 구체적인 클래스를 만들어서 사용을 해야한다.
 
-
 ```java
-abstract class Pet {
-    abstract void bark() {} ;
+abstract class Test_RobotPet.Pet {
+    abstract void bark() {
+    }
+
+    ;
     or
+
     abstract void bars();
 //void bark()
 }
 
-class Cat extends Pet {
+class Cat extends Test_RobotPet.Pet {
   ---
-  ---
+          ---
 }
 ```
 
@@ -36,18 +39,19 @@ class Cat extends Pet {
 - 추상클래스와는 다르게 인터페이스는 구현을 통해 클래스 정의
 - 일반적인 클래스들은 다중상속이 안됨, 인터페이스의 경우 **다중 구현이 가능**
 
-
 ```java
+import Test_RobotPet.Robot;
+
 interface Pet {
     void bark();
 }
 
-class Dog implements Pet {
-    
+class Dog implements Test_RobotPet.Pet {
+
 }
 
-class RobotDog extends Pet implements Robot, Robot2 {
-    
+class Test_RobotPet.RobotDog extends Test_RobotPet.Pet implements Robot, Robot2 {
+
 }
 ```
 
@@ -86,7 +90,7 @@ PET
 - 짓다
 
 
-Robot
+Test_RobotPet.Robot
 속성
 - 이름
 

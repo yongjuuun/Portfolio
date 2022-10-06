@@ -1,3 +1,5 @@
+package 객체_클래스_인스턴스;
+
 public class CarGame {
     public static void main(String[] args) {
 
@@ -10,7 +12,5 @@ public class CarGame {
 
         Cars Genesis = new Cars("blue", "GV80", "Genesis", 190);
         Genesis.go();
-
     }
-
 }

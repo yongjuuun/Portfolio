@@ -1,4 +1,6 @@
-public class K1 extends Gun{
+package 상속_오버라이딩;
+
+public class K1 extends Gun {
 
     public void fire() {
         System.out.println(model + " => => => => =>");

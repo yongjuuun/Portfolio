@@ -1,3 +1,5 @@
+package 상속_오버라이딩;
+
 public class Gun {
     protected String model;
     protected int bulletCount;

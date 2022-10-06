@@ -1,8 +1,9 @@
+package 객체_클래스_인스턴스;
+
 public class Cars {
     private String color;
     private String model;
     private String maker;
-//    private String tire;
     private int power;
     private int curSpeed;
 
@@ -24,62 +25,22 @@ public class Cars {
         } else {
             curSpeed += 170;
         }
-        System.out.println(maker +" "+ curSpeed+" "+color+" "+power);
+        System.out.println(maker + " " + curSpeed + " " + color + " " + power);
     }
-
-//    public void init() {
-//
-//    }
-
-//    public void stop() {
-//        curSpeed = 0;
-//    }
-
-//    public String getColor() {
-//        return color;
-//    }
 
     public void setColor(String color) {
         this.color = color;
     }
 
-//    public String getModel() {
-//        return model;
-//    }
-
     public void setModel(String model) {
         this.model = model;
     }
-
-//    public String getMaker() {
-//        return maker;
-//    }
 
     public void setMaker(String maker) {
         this.maker = maker;
     }
 
-//    public String getTire() {
-//        return tire;
-//    }
-
-//    public void setTire(String tire) {
-//        this.tire = tire;
-//    }
-
-//    public int getPower() {
-//        return power;
-//    }
-
     public void setPower(int power) {
         this.power = power;
     }
-
-//    public int getCurSpeed() {
-//        return curSpeed;
-//    }
-
-//    public void setCurSpeed(int curSpeed) {
-//        this.curSpeed = curSpeed;
-//    }
 }

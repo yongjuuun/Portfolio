@@ -1,3 +1,5 @@
+package 상속_오버라이딩;
+
 public class GunGame {
     public static void main(String[] args) {
         Gun gun = new Gun("shotgun");
