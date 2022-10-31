@@ -42,4 +42,4 @@ Method1Exception;
 Method2Exception;
 
 ## finally
-예외가 발생한 경우나 
+예외처리가 발생여부를 떠나 무조건 실행하도록 하는 구문
