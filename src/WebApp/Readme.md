@@ -16,3 +16,77 @@ DB 연동 툴 : JPA, Hibernate
 웹 서버 : Tomcat
 웹 템플릿 엔진 : Thymeleaf
 언어 : JAVA 11
+
+
+## 라이브러리
+
+- spring-boot-starter-tomcat : 웹서버
+- spring-webmvc
+
+spring-boot-starter-thymeleaf  
+spring-boot-starter
+- spring-boot
+  - spring-core
+- spring-boot-starter-login
+  - logback, slf4j
+
+
+service : 비즈니스 로직을 만들어주는 부분
+repository : 데이터베이스에 접근해서 데이터를 가져오는 부분
+
+
+## thymeleaf
+
+1. 정적컨텐츠
+- 스프링부트 프로젝트를 생성하면 자동으로 resources / static 경로 생성
+- 경로의 파일 요청시 우선순위 컨트롤러에서 매핑 검색 후 결과가 없으면 정적 컨텐츠 검색 후 반환
+
+
+- ※ 동작과정 ※
+
+웹 브라우저   
+-> localhost:8080/hello  
+-> **내장 톰캣 서버  
+-> 스프링 컨테이너(1 helloController 2 hello(model)  
+-> viewResolver)**   
+-> viewResolver(templates/hello.html)   
+-> html   
+-> 웹 브라우저
+
+
+2. MVC (Model View Control)
+: 하나의 서비스에서 관심사들을 나누는 방법
+
+- Model : 도메인
+- View : Front 담당
+- Controller : 비즈니스 로직
+- viewResolver 가 template 안에서 해당 파일을 찾아서 템플릿 엔진이 Model 로 받은 값(name:spring)을 렌더링해서 변환 후 반환
+
+
+- ※ 동작과정 ※  
+@RequestParam  
+locathost:8080/hello-mvc   
+-> 톰캣  
+-> HelloMVCController -model(name)  
+-> hello-template  (View Resolver)  
+-> html 변환 후 localhost 로 변환
+
+
+3. API
+- @ResponseBody
+  - 해당 어노테이션을 컨트롤러에 붙혀주면 http 프로토콜의 response body 영역에 값을 바로 넣어준다는 의미
+  - view 가 존재하지 않고, 페이지 이동도 없음
+- http body에 문자 내용 직접 반환
+- view Resolver 대신 HttpMessageConverter 동작
+- 기본 문자처리는 StringHttpMessageConverter 를 사용하지만 객체가 반환되면 MappingJacson2HttpMessageConverter 동작
+- byte 처리 등등 여러 HttpMessageConverter 가 기본으로 등록 
+
+
+- ※ 동작과정 ※  
+@RequestParam  
+locathost:8080/hello-api   
+-> 톰캣  
+-> HelloMVCController -model(name)  
+-> View Resolver(x)  
+-> html 변환 후 localhost 로 변환
+
