@@ -31,7 +31,7 @@ spring-boot-starter
   - logback, slf4j
 
 
-service : 비즈니스 로직을 만들어주는 부분
+service : 비즈니스 로직을 만들어주는 부분  
 repository : 데이터베이스에 접근해서 데이터를 가져오는 부분
 
 
