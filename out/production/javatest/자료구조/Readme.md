@@ -64,7 +64,7 @@ Collection
 | Set   | 순서를 유지하지 않는 데이터의 집합 | 데이터의 중복을 허용하지 않음 | HashSet, LinkedHashSet |
 | Map   | 키와 값의 쌍으로 이루어진 데이터 집합 | 순서유지x, 키 중복x, 값 중복o | HashMap, LinkedHashMap |
 
-#### List
+### List
 LinkedList
 - 양방향 포인터 구조로 데이터 삽입, 삭제가 빠름
 - ArrayList 보다 검색이 느림
@@ -75,25 +75,37 @@ ArrayList
 - 데이터 삽입, 삭제 느림
 - 데이터 검색  빠름
 
-#### Set
+### Set
 - 빠른 검색 속도
 - 인덱스가 존재하지 않기 때문에 iterator 사용
-  HashSet
+
+HashSet
 - Null 값 허용
-  LinkedHashSet
+
+LinkedHashSet
 - 입력된 순서를 보장
 
-#### Map
+### Map
 - 빠른 검색 속도
 - 인덱스가 존재하지 않기 때문에 iterator 사용
+- put, get, containsKey, remove, size, keySet
+  - key에 값 없을 경우 null 리턴
+  - key : 중복허용 X
+  - value : 중복 허용 O
+
 HashMap
 - Key에 대한 중복이 없고 순서 보장 X
 - Key, Value 값으로 null 허용
 - 동기화가 보장되지 않음
 - 검색에 가장 뛰어난 성능을 가짐
+- key와 value를 묶어 하나의 entry 로 저장
 
 LinkedHashMap
-- 입력된 순서 보장
+- 입력된 순서대로 데이터를 저장
 
-#### 자바구조
+TreeMap
+- 입력된 key 의 오름차순 순서로 데이터 저장
+  - 숫자 > 알파벳 대문자 > 알파벳 소문자 > 한글
+
+#### Collection, Map 구조
 ![img.png](img.png)
